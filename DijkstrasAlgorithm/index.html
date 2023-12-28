@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Dijkstra's Algorithm</title>
+		<script src="https://d3js.org/d3.v7.min.js"></script>
+        <link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div class="container-wrapper">
+			<div class="container original-graph-container">
+				<table>
+					<tr>
+						<td><h2>Original Graph</h2></td>
+						<td style="width: 200px; text-align: right; padding-right: 0; display: contents;">
+							<p style="padding-top: 3px;">
+								Select source node:
+								<select id="startNode">
+								</select>
+							</p>
+						</td>
+						<td style="width: 330px; text-align: right;">
+							<button onclick="ApplyDijkstrasAlgorithm();">Run Dijkstra's Algorithm</button>
+							<button onclick="location.reload();">Clear Page</button>
+						</td>
+						<td><h2>Dijkstra's Algorithm Result</h2></td>
+					</tr>
+					<tr>
+						<td colspan="3"><div class="graph-container" id="original-graph"></div></td>
+						<td>
+							<div class="graph-container result" id="dijkstra-graph">
+								<div id="distance-section"></div>
+							</div>
+						</td>
+					</tr>
+				</table>      
+			</div>		
+			<div class="footer">
+				<p>
+					To add a node, click once on the empty area.<br>
+					To create an edge, click on two nodes.<br>
+					To clear the graph and result, click "Clear Page".<br>
+					To run Dijkstra's Algorithm, select source node and click "Run Dijkstra's Algorithm".
+				</p>
+			</div>
+		</div>
+
+        <script src="scripts.js"></script>
+	</body>
+</html>
